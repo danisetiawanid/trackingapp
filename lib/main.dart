@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:trackingapp/pages/home_screen.dart';
+import 'package:trackingapp/pages/boarding_screen.dart';
 
 
 
@@ -16,6 +15,6 @@ class MyApp extends StatelessWidget {
         title: 'Tracking',
          debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch:Colors.purple),
-        home: HomeScreen());
+        home: BoardingScreen());
   }
 }
