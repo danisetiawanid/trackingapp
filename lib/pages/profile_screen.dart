@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trackingapp/pages/boarding_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -153,38 +154,72 @@ class ProfileScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    "Bio:",
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                         color:Color(0xff786DF5),
-                        fontWeight: FontWeight.w600,
-                        fontSize: 28.0),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8),
+                    child: Text(
+                      "Bio:",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                           color:Color(0xff786DF5),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 28.0),
+                    ),
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 5.0,
                   ),
-                  Text(
-                    'My name is Muhamad Dani Setiawan and I am  a Software Engineer.',
-                    
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w300,
-                      color: Colors.black87,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: Text(
+                      'My name is Muhamad Dani Setiawan and I am  a Software Engineer.',
                       
+                      style: TextStyle(
+                        fontSize: 21.0,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w300,
+                        color: Colors.black87,
+                        
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Container(
-            width: 300.00,
-          ),
+          
+          ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return BoardingScreen();
+                    }));
+                  },
+                  style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [Color(0xff786DF5), Color(0xffA79EFF)]),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Container(
+                      width: 320,
+                      height: 60,
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Contact Me',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'Poppins',
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+          
         ],
       ),
     );
