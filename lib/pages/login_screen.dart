@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:trackingapp/pages/home_screen.dart';
+import 'package:trackingapp/widget/bottom_navigation.dart';
 
-class LoginScreen extends StatefulWidget {
-  @override
-  _LoginScreenState createState() => _LoginScreenState();
-}
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
-class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -135,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return HomeScreen();
+                      return BottomNavigationController();
                     }));
                   },
                   style: ElevatedButton.styleFrom(
