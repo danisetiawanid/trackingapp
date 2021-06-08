@@ -206,7 +206,7 @@ class ProfileScreen extends StatelessWidget {
                             colors: [Color(0xff786DF5), Color(0xffA79EFF)]),
                         borderRadius: BorderRadius.circular(20)),
                     child: Container(
-                      width: 320,
+                      width: 350,
                       height: 60,
                       alignment: Alignment.center,
                       child: Text(
